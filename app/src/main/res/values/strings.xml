@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Traveling</string>
+    <string name="title">Tu App de Viajes</string>
+    <string name="onboarding">Hola, estamos buscando a millones de usuarios con inquietudes y ganas de viajar. Si eres tú? No lo dudes, accede a nuestra app y descubrirás miles de destinos y facilidades para alquilar coches, ver el tiempo....</string>
+    <string name="next">Next</string>
+    <string name="home">Upcoming meetups</string>
+    <string name="usa">USA, Los Angeles - 2 weeks</string>
+    <string name="city">City of Los Angeles</string>
+    <string name="madives">Madives - 3 weeks</string>
+    <string name="beach">Beach vacation</string>
+
 </resources>

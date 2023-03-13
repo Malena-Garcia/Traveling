@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tx_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        style="?appTravelingH4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/linear_btn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/tx_home"
+    android:layout_marginHorizontal="25dp"
+    >
+    <Button
+        android:id="@+id/button01"
+        style="?attr/appTravelingBtnIconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue_200"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:icon="@drawable/ic_baseline_camera_alt_24"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="10dp"
+        />
+
+    <Button
+        android:id="@+id/button02"
+        style="?attr/appTravelingBtnIconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_00"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:icon="@drawable/ic_baseline_favorite_24"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="10dp"
+        />
+
+    <Button
+        android:id="@+id/button03"
+        style="?attr/appTravelingBtnIconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink_200"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:icon="@drawable/ic_baseline_terrain_24"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="10dp" />
+
+    <Button
+        android:id="@+id/button04"
+        style="?attr/appTravelingBtnIconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:icon="@drawable/ic_baseline_face_24"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="0dp"
+        />
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:elevation="6dp"
+        app:cardCornerRadius="12dp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="216dp"
+        app:layout_constraintTop_toBottomOf="@id/linear_btn"
+        android:layout_margin="25dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_cont1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tx1_card1"
+                style="?appTravelingB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/usa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tx2_card1"
+                style="?appTravelingH5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/city"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tx1_card1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/cardView2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="25dp"
+    android:elevation="6dp"
+    app:cardCornerRadius="12dp"
+    tools:layout_editor_absoluteX="25dp"
+    tools:layout_editor_absoluteY="216dp"
+    app:layout_constraintTop_toBottomOf="@id/cardView1"
+    android:layout_margin="25dp"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_cont2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tx1_card2"
+        style="?appTravelingB1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/madives"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tx2_card2"
+        style="?appTravelingH5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/beach"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx1_card2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

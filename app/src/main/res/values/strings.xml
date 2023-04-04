@@ -8,5 +8,11 @@
     <string name="city">City of Los Angeles</string>
     <string name="madives">Madives - 3 weeks</string>
     <string name="beach">Beach vacation</string>
+    <string name="login">Login</string>
+    <string name="password">password</string>
+    <string name="forgot">Forgot password?</string>
+    <string name="get">Get Now</string>
+    <string name="account">Do you have an account?</string>
+    <string name="create">Create Now</string>
 
 </resources>

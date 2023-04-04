@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Login">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_nomads_city"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_login"
+                style="?appTravelingH4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                app:layout_constraintBottom_toBottomOf="@+id/img_login"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_user"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:hint="@string/login"
+                app:layout_constraintTop_toBottomOf="@id/img_login"
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/password"
+                app:layout_constraintTop_toBottomOf="@id/input_user"
+                android:inputType="textPassword"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?colorOnPrimary"
+                android:id="@+id/btn_login"
+                android:text="@string/login"
+                app:layout_constraintTop_toBottomOf="@id/input_password"
+                app:icon="@drawable/ic_baseline_arrow_forward_24"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_forgot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="76dp"
+                android:text="@string/forgot"
+                android:gravity="start"
+                app:layout_constraintEnd_toStartOf="@id/tv_get"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_login"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_get"
+                style="?appTravelingB2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:text="@string/get"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_forgot"
+                app:layout_constraintTop_toBottomOf="@id/btn_login"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="44dp"
+                android:gravity="end"
+                android:text="@string/account"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_create"
+                app:layout_constraintTop_toBottomOf="@id/tv_forgot"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_create"
+                style="?appTravelingB2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/create"
+                android:gravity="start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_account"
+                app:layout_constraintTop_toBottomOf="@id/tv_get"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
+
+

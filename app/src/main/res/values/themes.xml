@@ -24,5 +24,8 @@
         <item name="appTravelingButton">@style/TextAppearance.Traveling.Button</item>
 
         <item name="appTravelingBtnIconOnly">@style/Widget.App.Button.OutlinedButton.IconOnly</item>
+        <item name="appTravelingOutLineDropBox">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu</item>
+        <item name="appTravelingOutLineBox">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+
     </style>
 </resources>

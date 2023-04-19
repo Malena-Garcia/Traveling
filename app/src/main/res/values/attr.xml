@@ -16,4 +16,10 @@
     <attr name="appTravelingButtonOutlineBase" format="reference"/>
 
     <attr name="appTravelingBtnIconOnly" format="reference"/>
+    <attr name="appTravelingOutLineDropBox" format="reference"/>
+    <attr name="appTravelingOutLineBox" format="reference"/>
+
+
+
+
 </resources>

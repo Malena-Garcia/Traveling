@@ -10,21 +10,21 @@ import es.travelWorld.traveling.databinding.ActivityLoginBinding;
 
 public class Login extends AppCompatActivity {
 
-    private ActivityLoginBinding binding;
+    private ActivityLoginBinding dataBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        dataBinding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_login);
-        setContentView(binding.getRoot());
+        setContentView(dataBinding.getRoot());
         setListeners();
     }
 
     private void setListeners() {
-        binding.tvGet.setOnClickListener(view ->
+        dataBinding.tvGet.setOnClickListener(view ->
                 Snackbar.make(view,"Disponible proximamente...",Snackbar.LENGTH_SHORT).show());
-        binding.tvCreate.setOnClickListener(view ->
+        dataBinding.tvCreate.setOnClickListener(view ->
                 Snackbar.make(view,"Disponible proximamente...",Snackbar.LENGTH_SHORT).show());
 
     }

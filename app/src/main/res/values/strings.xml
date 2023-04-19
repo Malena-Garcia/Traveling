@@ -14,5 +14,14 @@
     <string name="get">Get Now</string>
     <string name="account">Do you have an account?</string>
     <string name="create">Create Now</string>
+    <string name="name">¿Cómo te llamas?</string>
+    <string name="apellido">¿Y tu apellido?</string>
+    <string name="edad">¿Cuantos años tienes?</string>
+    <string name="meapunto">Me apunto</string>
+    <string name="politica">Política de privacidad</string>
+    <string name="condiciones">Ver condiciones</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="icon">persona</string>
 
 </resources>

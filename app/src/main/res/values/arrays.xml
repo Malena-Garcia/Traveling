@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="edad">
+        <item>0-5 años</item>
+        <item>6-11 años</item>
+        <item>12-17 años</item>
+        <item>18-99 años</item>
+    </string-array>
+</resources>

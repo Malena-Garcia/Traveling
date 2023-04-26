@@ -36,6 +36,7 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -43,5 +44,15 @@ dependencies {
     def nav_version = "2.5.3" // Asegúrate de usar la última versión disponible
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
-}
+    //AÑADIDO PRUEBA CAMARA
+    def activity_version = "1.7.1"
+    // Java language implementation
+    implementation "androidx.activity:activity:$activity_version"
+    def fragment_version = "1.5.7"
+    // Java language implementation
+    implementation "androidx.fragment:fragment:$fragment_version"
 
+}
+configurations.implementation {
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+}

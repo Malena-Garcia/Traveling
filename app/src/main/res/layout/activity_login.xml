@@ -4,7 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="activityLogin"
+            type="es.travelWorld.traveling.Login" />
 
+        <variable
+            name="modelView"
+            type="es.travelWorld.traveling.domain.User" />
     </data>
 
     <ScrollView
@@ -28,8 +34,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ImageContrastCheck"
-                />
+                tools:ignore="ImageContrastCheck" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/txt_login"
@@ -45,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
-                android:hint="@string/login"
+                android:hint= "@string/login1"
                 app:layout_constraintTop_toBottomOf="@id/img_login"
                 />
 
@@ -53,7 +58,7 @@
                 android:id="@+id/input_password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/password"
+                android:hint="@string/password1"
                 app:layout_constraintTop_toBottomOf="@id/input_user"
                 android:inputType="textPassword"
                 />
@@ -61,7 +66,8 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="?colorOnPrimary"
+                android:enabled="false"
+
                 android:id="@+id/btn_login"
                 android:text="@string/login"
                 app:layout_constraintTop_toBottomOf="@id/input_password"
@@ -109,11 +115,13 @@
                 style="?appTravelingB2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/create"
                 android:gravity="start"
+                android:layout_marginBottom="25dp"
+                android:text="@string/create"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tv_account"
                 app:layout_constraintTop_toBottomOf="@id/tv_get"
+                app:layout_constraintBottom_toBottomOf="parent"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

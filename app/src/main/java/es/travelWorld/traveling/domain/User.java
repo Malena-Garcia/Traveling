@@ -1,10 +1,16 @@
 package es.travelWorld.traveling.domain;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
+
+import java.io.Serializable;
+
 import es.travelWorld.traveling.BR;
 
-public class User extends BaseObservable {
+public class User extends BaseObservable implements Parcelable {
     private String nombre;
     private String apellido;
 
@@ -31,4 +37,40 @@ public class User extends BaseObservable {
             notifyPropertyChanged(BR.apellido);
          }
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.nombre);
+        dest.writeString(this.apellido);
+    }
+
+    public void readFromParcel(Parcel source) {
+        this.nombre = source.readString();
+        this.apellido = source.readString();
+    }
+
+    public User() {
+    }
+
+    protected User(Parcel in) {
+        this.nombre = in.readString();
+        this.apellido = in.readString();
+    }
+
+    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel source) {
+            return new User(source);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 }

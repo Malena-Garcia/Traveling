@@ -156,17 +156,6 @@
                     app:layout_constraintStart_toEndOf="@id/tv_politica"
                     app:layout_constraintTop_toBottomOf="@id/main_login" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/prueba_camara"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginVertical="5dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.096"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/edad_reg" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

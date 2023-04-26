@@ -40,8 +40,6 @@ public class Login extends AppCompatActivity {
         }
     }
 
-
-
     private void setViews() {
         username = dataBinding.inputUser;
         userpassword = dataBinding.inputPassword;
@@ -50,8 +48,6 @@ public class Login extends AppCompatActivity {
     private void setListeners() {
         dataBinding.tvGet.setOnClickListener(view ->
                 Snackbar.make(view,"Disponible proximamente...",Snackbar.LENGTH_SHORT).show());
-        dataBinding.tvGet.setOnClickListener(view ->
-                Snackbar.make(view,username.getText(),Snackbar.LENGTH_SHORT).show());
 
         dataBinding.tvCreate.setOnClickListener(view -> {
             Intent i = new Intent(Login.this, RegisterActivity.class);

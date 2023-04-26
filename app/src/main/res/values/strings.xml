@@ -25,5 +25,11 @@
     <string name="icon">persona</string>
     <string name="login1">Login / Nombre</string>
     <string name="password1">Password / Apellido</string>
+    <string name="help_menu">Ayuda</string>
+    <string name="disney_menu">Eurodisney</string>
+    <string name="car_menu">Alquila un coche</string>
+    <string name="register_name">Registro</string>
+    <string name="home_name">Home</string>
+    <string name="fragment">Nuevo gragment Lila</string>
 
 </resources>

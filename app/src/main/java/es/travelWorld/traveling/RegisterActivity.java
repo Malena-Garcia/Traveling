@@ -4,6 +4,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import android.Manifest;
@@ -12,9 +13,12 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -29,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
     private int nom=0;
     private int apel=0;
     private AppCompatImageView hacerFoto;
+    private ImageView photo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +41,25 @@ public class RegisterActivity extends AppCompatActivity {
         dataBinding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_register);
         setContentView(dataBinding.getRoot());
+        setSupportActionBar(dataBinding.registerToolbar);
         setViews();
         setListeners();
         setBindRepo();
         String[] items = getResources().getStringArray(R.array.edad);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.list_item, items);
         registroDropdown.setAdapter(adapter);
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.registro_activity_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+        //return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 
     private ActivityResultLauncher<String> pedirPermisos = registerForActivityResult(
@@ -60,12 +77,13 @@ public class RegisterActivity extends AppCompatActivity {
         photoBitmap.launch(intent);
     }
 
+
     ActivityResultLauncher<Intent> photoBitmap =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
                 if (result.getResultCode() == RESULT_OK && result.getData() != null){
                     Bundle extras = result.getData().getExtras();
                     Bitmap imgBitmap = (Bitmap) extras.get("data");
-                   // photo.setImageBitmap(imgBitmap);
+                    photo.setImageBitmap(imgBitmap);
                 }
             });
 
@@ -74,6 +92,7 @@ public class RegisterActivity extends AppCompatActivity {
         apellidoSet = dataBinding.apellidoSet;
         registroDropdown = dataBinding.registroDropdown;
         hacerFoto= dataBinding.cameraReg;
+        photo=dataBinding.imgReg;
     }
 
     private void setListeners() {

@@ -100,9 +100,15 @@ public class Login extends AppCompatActivity {
            if (nombreRegistro == null ){
                 Snackbar.make(view,"Debe registrarse para acceder, pulse 'Create now'...",Snackbar.LENGTH_SHORT).show();
            } else if (!nombreRegistro.equals(username.getText().toString()) || !apellidoRegistro.equals(userpassword.getText().toString()) ){
-                Toast.makeText(Login.this, " usuario o contraseña incorrectos ", Toast.LENGTH_SHORT).show();
+               Snackbar snackbar = Snackbar.make(view, "Usuario o contraseña incorrectos. Compruebe los datos.", Snackbar.LENGTH_INDEFINITE)
+                       .setAction("ENTENDIDO", new View.OnClickListener() {
+                   @Override
+                   public void onClick(View view) {
+
+                   }
+               });
+               snackbar.show();
            } else if (nombreRegistro.equals(username.getText().toString()) && apellidoRegistro.equals(userpassword.getText().toString()) ){
-                Toast.makeText(Login.this, " usuario y contraseña correctos ", Toast.LENGTH_SHORT).show();
                 User userLogin = provideFromServer();
                 Intent i = new Intent(Login.this,Home.class).putExtra("datosLogin",userLogin);
                 startActivity(i);

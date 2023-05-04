@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import es.travelWorld.traveling.databinding.ActivityHomeBinding;
 import es.travelWorld.traveling.domain.User;
 
@@ -20,16 +22,14 @@ public class Home extends AppCompatActivity {
 
     private ActivityHomeBinding dataBinding;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         dataBinding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_home);
         setContentView(dataBinding.getRoot());
-        //setSupportActionBar(dataBinding.homeToolbar);
-
         getIntentExtras();
+
         dataBinding.homeToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -62,8 +62,10 @@ public class Home extends AppCompatActivity {
     }
 
     private void updateUI(User recibeDatos) {
-        Toast.makeText(this, "Tenemos usuario " + recibeDatos.getNombre() + " " + recibeDatos.getApellido(), Toast.LENGTH_LONG).show();
-        Log.e("Male", "Tenemos usuario " + recibeDatos.getNombre() + " " + recibeDatos.getApellido());
+        Snackbar.make(dataBinding.mainContentFragment, "Tenemos usuario " + recibeDatos.getNombre() + " " + recibeDatos.getApellido(), Snackbar.LENGTH_LONG)
+                .show();
+     //   Toast.makeText(this, "Tenemos usuario " + recibeDatos.getNombre() + " " + recibeDatos.getApellido(), Toast.LENGTH_LONG).show();
+     //   Log.e("Male", "Tenemos usuario " + recibeDatos.getNombre() + " " + recibeDatos.getApellido());
     }
 
     @Override
